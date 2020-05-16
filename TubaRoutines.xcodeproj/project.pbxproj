@@ -15,6 +15,12 @@
 		9C694C05246ED77300BCD03B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C694C03246ED77300BCD03B /* LaunchScreen.storyboard */; };
 		9C694C10246ED77400BCD03B /* TubaRoutinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C694C0F246ED77400BCD03B /* TubaRoutinesTests.swift */; };
 		9C694C1B246ED77400BCD03B /* TubaRoutinesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C694C1A246ED77400BCD03B /* TubaRoutinesUITests.swift */; };
+		9C694C65246EDD8D00BCD03B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C694C64246EDD8D00BCD03B /* MainView.swift */; };
+		9C694C67246EDDA800BCD03B /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C694C66246EDDA800BCD03B /* RoutineView.swift */; };
+		9C694C69246EDDB700BCD03B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C694C68246EDDB700BCD03B /* ListView.swift */; };
+		9C694C6B246EDDD600BCD03B /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C694C6A246EDDD600BCD03B /* ExerciseDetailView.swift */; };
+		9C694C6D246EDDEB00BCD03B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C694C6C246EDDEB00BCD03B /* SettingsView.swift */; };
+		9C694C6F246EDE2A00BCD03B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C694C6E246EDE2A00BCD03B /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		9C694C16246ED77400BCD03B /* TubaRoutinesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubaRoutinesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C694C1A246ED77400BCD03B /* TubaRoutinesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubaRoutinesUITests.swift; sourceTree = "<group>"; };
 		9C694C1C246ED77400BCD03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C694C64246EDD8D00BCD03B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9C694C66246EDDA800BCD03B /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
+		9C694C68246EDDB700BCD03B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		9C694C6A246EDDD600BCD03B /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
+		9C694C6C246EDDEB00BCD03B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9C694C6E246EDE2A00BCD03B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,12 @@
 				9C694BF8246ED77100BCD03B /* AppDelegate.swift */,
 				9C694BFA246ED77100BCD03B /* SceneDelegate.swift */,
 				9C694BFC246ED77100BCD03B /* ContentView.swift */,
+				9C694C64246EDD8D00BCD03B /* MainView.swift */,
+				9C694C66246EDDA800BCD03B /* RoutineView.swift */,
+				9C694C68246EDDB700BCD03B /* ListView.swift */,
+				9C694C6A246EDDD600BCD03B /* ExerciseDetailView.swift */,
+				9C694C6C246EDDEB00BCD03B /* SettingsView.swift */,
+				9C694C6E246EDE2A00BCD03B /* Model.swift */,
 				9C694BFE246ED77300BCD03B /* Assets.xcassets */,
 				9C694C03246ED77300BCD03B /* LaunchScreen.storyboard */,
 				9C694C06246ED77300BCD03B /* Info.plist */,
@@ -267,7 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C694C6F246EDE2A00BCD03B /* Model.swift in Sources */,
+				9C694C6B246EDDD600BCD03B /* ExerciseDetailView.swift in Sources */,
+				9C694C6D246EDDEB00BCD03B /* SettingsView.swift in Sources */,
 				9C694BF9246ED77100BCD03B /* AppDelegate.swift in Sources */,
+				9C694C65246EDD8D00BCD03B /* MainView.swift in Sources */,
+				9C694C69246EDDB700BCD03B /* ListView.swift in Sources */,
+				9C694C67246EDDA800BCD03B /* RoutineView.swift in Sources */,
 				9C694BFB246ED77100BCD03B /* SceneDelegate.swift in Sources */,
 				9C694BFD246ED77100BCD03B /* ContentView.swift in Sources */,
 			);
@@ -443,6 +467,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlexanderBurdiss.TubaRoutines;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -463,6 +488,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlexanderBurdiss.TubaRoutines;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

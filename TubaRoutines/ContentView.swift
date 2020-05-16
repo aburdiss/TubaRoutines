@@ -10,7 +10,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        TabView {
+            MainView()
+                .tabItem {
+                    Image(systemName: "book")
+                    Text("Routine")
+            }
+            ListView()
+                .tabItem {
+                    Image(systemName: "folder")
+                    Text("All Exercises")
+            }
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "slider.horizontal.3")
+                    Text("Settings")
+            }
+        }
+        .environmentObject(settingsModel())
+        .environmentObject(Favorites())
+        .animation(.none)
+        .accentColor(Color.yellow)
     }
 }
 
