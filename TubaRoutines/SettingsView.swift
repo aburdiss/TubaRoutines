@@ -8,9 +8,28 @@
 
 import SwiftUI
 
+/**
+Allows the user to taylor the routine to their needs. Resources and other options displayed in this view.
+*/
 struct SettingsView: View {
+    /**
+    The user selected preferences.
+    */
     @EnvironmentObject var settings: settingsModel
     
+    /**
+     The user selected Favorites
+     */
+    @EnvironmentObject var favorites: Favorites
+    
+    /**
+     State variable that determines whether the resettingFavorites Alert Sheet will show.
+     */
+    @State private var resettingFavoritesAlert = false
+    
+    /**
+     The user interface
+     */
     var body: some View {
         NavigationView {
             VStack {
@@ -29,10 +48,10 @@ struct SettingsView: View {
                             Text("Single Note Articulation")
                         }
                         Toggle(isOn: $settings.variableArticulationToggle) {
-                            Text("Changing Note Articulation")
+                            Text("Moving Note Articulation")
                         }
                         Toggle(isOn: $settings.majorScalesToggle) {
-                            Text("Major Scales")
+                            Text("Scales")
                         }
                         Toggle(isOn: $settings.highRangeToggle) {
                             Text("High Range")
@@ -45,10 +64,25 @@ struct SettingsView: View {
                     Section(header: Text("Routine Length")) {
                         Picker(selection: $settings.selectedDifficulty, label:Text("Routine Length")) {
                             ForEach(0 ..< 3) {
-                                Text(self.settings.difficulties[$0])
+                                Text(NSLocalizedString(self.settings.difficulties[$0], comment: ""))
                             }
                         }
                     .pickerStyle(SegmentedPickerStyle())
+                    }
+                    Section(header: Text("Favorites")) {
+                        Button(action: {
+                            self.resettingFavoritesAlert = true
+                        }) {
+                            HStack {
+                                Text("Reset Favorites")
+                                Image(systemName: "heart.slash")
+                            }
+                        }
+                        .alert(isPresented: $resettingFavoritesAlert) {
+                            Alert(title: Text("All favorites will be removed"), message: Text("This cannot be undone!"), primaryButton: .destructive(Text("Reset")) {
+                                self.resetFavorites()
+                            }, secondaryButton: .cancel())
+                        }
                     }
                     Section(header: Text("Resources")) {
                         Button(action: {
@@ -146,10 +180,16 @@ struct SettingsView: View {
                 }
                 .listStyle(GroupedListStyle())
             }
-            .environmentObject(settings)
             .navigationBarTitle("Settings")
         }
-    .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    /**
+     Removes all favorites from the favorites model.
+     */
+    func resetFavorites() {
+        self.favorites.removeAll()
     }
 }
 

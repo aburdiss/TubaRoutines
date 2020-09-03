@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  TubaRoutines
+
+  Created by Alexander Burdiss on 8/31/20.
+  Copyright © 2020 Alex Burdiss. All rights reserved.
+*/
+
+// Tab Labels
+"Routine" = "套路";
+"All Exercises" = "所有练习";
+"Settings" = "设定";
+
+// Routine View
+"Tuba Routines" = "大号套路";
+"Begin Routine" = "开始套路";
+
+"Daily Routine Complete!" = "套路完成!";
+"Return" = "返回";
+"Back" = "后";
+"Next" = "下";
+
+// List View
+"This is a favorite exercise" = "这是最喜欢的练习";
+"Long Tones" = "长音";
+"Slow Lip Slurs" = "慢嘴唇连音";
+"Fast Lip Slurs" = "快嘴唇连音";
+"Single Note Articulation" = "单音符点舌";
+"Moving Note Articulation" = "改变音符点舌";
+"Scales" = "大调音阶";
+"High Range" = "高音";
+"Low Range" = "高音";
+
+// Settings
+"Fundamentals" = "基本面";
+"Routine Length" = "套路长度";
+"Favorites" = "最喜欢的练习";
+"Reset Favorites" = "重启最喜欢的练习";
+"All favorites will be removed" = "所有喜爱的练习将被删除";
+"This cannot be undone!" = "这不能被撤消!";
+"Reset" = "重启";
+"Resources" = "资源";
+"Download TbaXcerpts" = "下载 TbaXcerpts";
+"Download Euphonium Routines" = "下载 Euphonium Routines";
+"Download Scale Practice - Randomizer" = "下载 Scale Practice - Randomizer";
+"Visit Ars Nova Publishing" = "浏览 Ars Nova Publishing";
+"Visit Band Room Online" = "浏览 Band Room Online";
+"About" = "关于";
+"Send Feedback" = "给我们反馈";
+
+// Model
+"Short" = "短";
+"Medium" = "中";
+"Long" = "长";

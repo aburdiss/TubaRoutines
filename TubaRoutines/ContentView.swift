@@ -8,7 +8,13 @@
 
 import SwiftUI
 
+/**
+The Overlaying view containing the app. This view contains the tab view, and is the parent view responsible for passing environment variables into the rest of the app.
+*/
 struct ContentView: View {
+    /**
+    The user interface
+    */
     var body: some View {
         TabView {
             MainView()

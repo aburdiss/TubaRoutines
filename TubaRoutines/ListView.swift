@@ -8,11 +8,18 @@
 
 import SwiftUI
 
+/**
+The list of all exercises in the app. When clicked, ExerciseDetailView will open and display the exercise. Each exercise must be referred to statically because Swift has problems using Dynamically Generated content the destination of a NavigationLink. This may be updated in future versions of Swift
+*/
 struct ListView: View {
+    /**
+    The user selected Favorites
+    */
     @EnvironmentObject var favorites: Favorites
     
-    @State private var resettingFavoritesAlert = false
-    
+    /**
+    The user interface
+    */
     var body: some View {
         NavigationView {
             List {
@@ -658,27 +665,11 @@ struct ListView: View {
                         }
                     }
                 }
-                
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("All Exercises")
-            .navigationBarItems(trailing: Button(action: {
-                self.resettingFavoritesAlert = true
-            }) {
-                Text("Reset")
-                Image(systemName: "heart.slash")
-            }
-            .alert(isPresented: $resettingFavoritesAlert) {
-                Alert(title: Text("All favorites will be removed"), message: Text("This cannot be undone!"), primaryButton: .destructive(Text("Reset")) {
-                    self.resetFavorites()
-                    }, secondaryButton: .cancel())
-            })
         }
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-    
-    func resetFavorites() {
-        self.favorites.removeAll()
     }
 }
 

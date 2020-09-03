@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  TubaRoutines
+
+  Created by Alexander Burdiss on 8/31/20.
+  Copyright © 2020 Alex Burdiss. All rights reserved.
+*/
+
+// Tab Labels
+"Routine" = "Routine";
+"All Exercises" = "All Exercises";
+"Settings" = "Settings";
+
+// Routine View
+"Tuba Routines" = "Tuba Routines";
+"Begin Routine" = "Begin Routine";
+
+"Daily Routine Complete!" = "Daily Routine Complete!";
+"Return" = "Return";
+"Back" = "Back";
+"Next" = "Next";
+
+// List View
+"This is a favorite exercise" = "This is a favorite exercise";
+"Long Tones" = "Long Tones";
+"Slow Lip Slurs" = "Slow Lip Slurs";
+"Fast Lip Slurs" = "Fast Lip Slurs";
+"Single Note Articulation" = "Single Note Articulation";
+"Moving Note Articulation" = "Changing Note Articulation";
+"Scales" = "Major Scales";
+"High Range" = "High Range";
+"Low Range" = "Low Range";
+
+// Settings
+"Fundamentals" = "Fundamentals";
+"Routine Length" = "Routine Length";
+"Favorites" = "Favorites";
+"Reset Favorites" = "Reset Favorites";
+"All favorites will be removed" = "All favorites will be removed";
+"This cannot be undone!" = "This cannot be undone!";
+"Reset" = "Reset";
+"Resources" = "Resources";
+"Download TbaXcerpts" = "Download TbaXcerpts";
+"Download Euphonium Routines" = "Download Euphonium Routines";
+"Download Scale Practice - Randomizer" = "Download Scale Practice - Randomizer";
+"Visit Ars Nova Publishing" = "Visit Ars Nova Publishing";
+"Visit Band Room Online" = "Visit Band Room Online";
+"About" = "About";
+"Send Feedback" = "Send Feedback";
+
+// Model
+"Short" = "Short";
+"Medium" = "Medium";
+"Long" = "Long";

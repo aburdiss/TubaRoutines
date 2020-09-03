@@ -8,17 +8,43 @@
 
 import SwiftUI
 
+/**
+The Daily routine is shown in this view. User settings are checked on view load, and from user settings a new routine is generated.
+*/
 struct RoutineView: View {
+    /**
+    The user selected settings. Used to determine what exercises to select for the routine. Settings are determined in SettingsView.swift
+    */
     @EnvironmentObject var settings: settingsModel
+    
+    /**
+    The user selected favorites.
+    */
     @EnvironmentObject var favorites: Favorites
     
+    /**
+    The current presentation mode of the view. By exposing this variable the view is able to dismiss itself and return to the previous view (MainView.swift)
+    */
     @Environment(\.presentationMode) var presentationMode
     
+    /**
+    State variable used to determine whether or not the finishedRoutine modal is displayed.
+    */
     @State private var finishedRoutine = false
     
+    /**
+    The generated routine stored as an array of exercises. Initialized to an arbitrary set of exercises to avoid compiler complaints and is updated on view load according to user defined settings.
+    */
     @State var routine = ["1"]
+    
+    /**
+    The index of the current exercise in routine array. Incremented by the user after performing the exercise.
+    */
     @State var thisExercise = 0
     
+    /**
+     The user interface
+     */
     var body: some View {
         VStack() {
             Image(routine[thisExercise])
@@ -82,11 +108,11 @@ struct RoutineView: View {
      Generates a random routine from available exercises
      */
     func generateRoutine() {
+        var tempExercise: String
+        var newRoutine: [String] = []
         
         checkDefaults()
         self.settings.objectWillChange.send()
-        var tempExercise: String
-        var newRoutine: [String] = []
         
         /// Adds one long tone
         if self.settings.longTonesToggle {
@@ -217,6 +243,10 @@ struct RoutineView: View {
         }
     }
     
+    /**
+    Checks the user defaults to make sure they have been initialized, and if not, initializes all settings to defaults.
+    Settings may not be initialized in user launches app for the first time.
+    */
     func checkDefaults() {
         if !settings.longTonesToggle &&
             !settings.slowLipSlursToggle &&
