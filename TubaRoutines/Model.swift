@@ -49,9 +49,14 @@ Array of all low range exercises in the app
 let lowRange: [String] = ["80", "81", "82", "83", "84", "85", "86", "87"]
 
 /**
+ Array of all of the exercises in the app
+ */
+let allExercises: [String] = longTones + slowLipSlurs + fastLipSlurs + staticArticulation + variableArticulation + scales + highRange + lowRange
+
+/**
 The logic responsible for setting and retrieving user defined settings in local memory. Settings persist between app termination and launch.
 */
-class settingsModel: ObservableObject {
+class Settings: ObservableObject {
     /**
     The different difficulty names to be shown on the difficulty selection picker.
     */
@@ -200,5 +205,85 @@ class Favorites: ObservableObject {
     func save() {
         // write out data
         UserDefaults.standard.set(self.images, forKey: saveKey)
+    }
+    
+    func isEmpty() -> Bool {
+        return self.images.count == 0
+    }
+    
+    func getAllFavorites() -> [String] {
+        return self.images
+    }
+}
+
+struct CustomRoutine: Equatable, Identifiable, Codable {
+    var id = UUID()
+    var name: String
+    var routine: [String]
+}
+
+class CustomRoutines: ObservableObject {
+    // the actual routines the user created
+    @Published var routines: [CustomRoutine] = []
+    
+    // the key we're using to read/write in UserDefaults
+    private let saveKey = "Routines"
+
+    init() {
+        if let data = UserDefaults.standard.data(forKey: saveKey) {
+            if let decoded = try? JSONDecoder().decode([CustomRoutine].self, from: data) {
+                self.routines = decoded
+                return
+            }
+        }
+        
+        self.routines = []
+    }
+
+    // returns true if set contains favorite
+    func contains(_ routine: CustomRoutine) -> Bool {
+        routines.contains(routine)
+    }
+
+    // adds the favorite to set, updates all views, and saves the change
+    func add(_ routine: CustomRoutine) {
+        objectWillChange.send()
+        routines.append(routine)
+        save()
+    }
+
+    // removes the favorite from set, updates all views, and saves change
+    func remove(_ routine: CustomRoutine) {
+        objectWillChange.send()
+        var counter = 0
+        var removeIndex = 0
+        while counter < routines.count {
+            if routines[counter] == routine {
+                removeIndex = counter
+            }
+            counter += 1
+        }
+        routines.remove(at: removeIndex)
+        save()
+    }
+    
+    func removeAll() {
+        objectWillChange.send()
+        routines.removeAll()
+        save()
+    }
+
+    func save() {
+        if let encoded = try? JSONEncoder().encode(routines) {
+            UserDefaults.standard.set(encoded, forKey: saveKey)
+        }
+    }
+    
+    func isEmpty() -> Bool {
+        return self.routines.count == 0
+    }
+    
+    func getAllRoutines() -> [CustomRoutine] {
+        return self.routines
     }
 }

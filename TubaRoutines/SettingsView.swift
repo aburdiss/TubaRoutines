@@ -15,7 +15,7 @@ struct SettingsView: View {
     /**
     The user selected preferences.
     */
-    @EnvironmentObject var settings: settingsModel
+    @EnvironmentObject var settings: Settings
     
     /**
      The user selected Favorites
@@ -23,9 +23,19 @@ struct SettingsView: View {
     @EnvironmentObject var favorites: Favorites
     
     /**
+     The user created Custom Routines
+     */
+    @EnvironmentObject var customRoutines: CustomRoutines
+    
+    /**
      State variable that determines whether the resettingFavorites Alert Sheet will show.
      */
     @State private var resettingFavoritesAlert = false
+    
+    /**
+     State variable that determines whether the resettingCustomRoutinesAlert Sheet will show
+     */
+    @State private var resettingCustomRoutinesAlert = false
     
     /**
      The user interface
@@ -81,6 +91,21 @@ struct SettingsView: View {
                         .alert(isPresented: $resettingFavoritesAlert) {
                             Alert(title: Text("All favorites will be removed"), message: Text("This cannot be undone!"), primaryButton: .destructive(Text("Reset")) {
                                 self.resetFavorites()
+                            }, secondaryButton: .cancel())
+                        }
+                    }
+                    Section(header: Text("Custom Routines")) {
+                        Button(action: {
+                            self.resettingCustomRoutinesAlert = true
+                        }) {
+                            HStack {
+                                Text("Reset Custom Routines")
+                                Image(systemName: "pencil.slash")
+                            }
+                        }
+                        .alert(isPresented: $resettingCustomRoutinesAlert) {
+                            Alert(title: Text("All custom routines will be removed"), message: Text("This cannot be undone!"), primaryButton: .destructive(Text("Reset")) {
+                                self.resetCustomRoutines()
                             }, secondaryButton: .cancel())
                         }
                     }
@@ -191,10 +216,17 @@ struct SettingsView: View {
     func resetFavorites() {
         self.favorites.removeAll()
     }
+    
+    /**
+     Removes all custom routines in the custom routines model
+     */
+    func resetCustomRoutines() {
+        self.customRoutines.removeAll()
+    }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView().environmentObject(settingsModel())
+        SettingsView().environmentObject(Settings())
     }
 }

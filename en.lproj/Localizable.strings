@@ -9,11 +9,13 @@
 // Tab Labels
 "Routine" = "Routine";
 "All Exercises" = "All Exercises";
+"Custom" = "Custom";
 "Settings" = "Settings";
 
 // Routine View
 "Tuba Routines" = "Tuba Routines";
 "Begin Routine" = "Begin Routine";
+"Randomize Favorites" = "Randomize Favorites";
 
 "Daily Routine Complete!" = "Daily Routine Complete!";
 "Return" = "Return";
@@ -31,12 +33,26 @@
 "High Range" = "High Range";
 "Low Range" = "Low Range";
 
+// Custom View
+"Custom Routines" = "Custom Routines";
+"Create" = "Create";
+"(1 exercise)" = "(1 exercise)";
+"exercises" = "exercises";
+"Create Routine" = "Create Routine";
+"Routine Name" = "Routine Name";
+"Preview" = "Preview";
+"Add To List" = "Add to List";
+"Please enter a name" = "Please enter a name";
+"Please select at least one exercise" = "Please select at least one exercise";
+
 // Settings
 "Fundamentals" = "Fundamentals";
 "Routine Length" = "Routine Length";
 "Favorites" = "Favorites";
 "Reset Favorites" = "Reset Favorites";
+"Reset Custom Routines" = "Reset Custom Routines";
 "All favorites will be removed" = "All favorites will be removed";
+"All custom routines will be removed" = "All custom routines will be removed";
 "This cannot be undone!" = "This cannot be undone!";
 "Reset" = "Reset";
 "Resources" = "Resources";

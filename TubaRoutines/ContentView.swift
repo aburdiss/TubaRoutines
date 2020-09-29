@@ -27,13 +27,19 @@ struct ContentView: View {
                     Image(systemName: "folder")
                     Text("All Exercises")
             }
+            CustomListView()
+                .tabItem {
+                    Image(systemName: "pencil")
+                    Text("Custom")
+            }
             SettingsView()
                 .tabItem {
                     Image(systemName: "slider.horizontal.3")
                     Text("Settings")
             }
         }
-        .environmentObject(settingsModel())
+        .environmentObject(Settings())
+        .environmentObject(CustomRoutines())
         .environmentObject(Favorites())
         .animation(.none)
         .accentColor(Color.yellow)

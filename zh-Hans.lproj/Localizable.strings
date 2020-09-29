@@ -9,11 +9,13 @@
 // Tab Labels
 "Routine" = "套路";
 "All Exercises" = "所有练习";
+"Custom" = "定制";
 "Settings" = "设定";
 
 // Routine View
 "Tuba Routines" = "大号套路";
 "Begin Routine" = "开始套路";
+"Randomize Favorites" = "随机你的最喜欢的练习";
 
 "Daily Routine Complete!" = "套路完成!";
 "Return" = "返回";
@@ -31,12 +33,27 @@
 "High Range" = "高音";
 "Low Range" = "高音";
 
+// Custom View
+"Custom Routines" = "定制套路";
+"Create" = "建立";
+"(1 exercise)" = "(1 练习)";
+"exercises" = "练习";
+"Create Routine" = "建立套路";
+"Routine Name" = "套路的名字";
+"Preview" = "预习";
+"Add To List" = "加入列表";
+"Please enter a name" = "请写一个名字";
+"Please select at least one exercise" = "请至少选择一项练习";
+
+
 // Settings
 "Fundamentals" = "基本面";
 "Routine Length" = "套路长度";
 "Favorites" = "最喜欢的练习";
 "Reset Favorites" = "重启最喜欢的练习";
+"Reset Custom Routines" = "重置定制套路";
 "All favorites will be removed" = "所有喜爱的练习将被删除";
+"All custom routines will be removed" = "所有定制套路将被删除";
 "This cannot be undone!" = "这不能被撤消!";
 "Reset" = "重启";
 "Resources" = "资源";

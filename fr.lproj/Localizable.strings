@@ -9,11 +9,13 @@
 // Tab Labels
 "Routine" = "Routine";
 "All Exercises" = "Tous les Exercices";
+"Custom" = "Personnalisé";
 "Settings" = "Paramètres";
 
 // Routine View
 "Tuba Routines" = "Routines de Tuba";
 "Begin Routine" = "Commencer la Routine";
+"Randomize Favorites" = "Randomiser les Favoris";
 
 "Daily Routine Complete!" = "Routine quotidienne terminée!";
 "Return" = "Revenir";
@@ -31,12 +33,26 @@
 "High Range" = "L’aigu Tessiture";
 "Low Range" = "Grave Tessiture";
 
+// Custom View
+"Custom Routines" = "Routines Personnalisées";
+"Create" = "Créer";
+"(1 exercise)" = "(1 exercice)";
+"exercises" = "exercices";
+"Create Routine" = "Créer Routine";
+"Routine Name" = "Nom de Routine";
+"Preview" = "Aperçu";
+"Add To List" = "Ajouter à la liste";
+"Please enter a name" = "Veuillez saisir un nom";
+"Please select at least one exercise" = "Veuillez sélectionner au moins un exercice";
+
 // Settings
 "Fundamentals" = "Fondamentaux";
 "Routine Length" = "Durée de la Routine";
 "Favorites" = "Favoris";
 "Reset Favorites" = "Réinitialiser les Favoris";
+"Reset Custom Routines" = "Réinitialiser Routines Personnalisées";
 "All favorites will be removed" = "Tous les favoris seront supprimés";
+"All custom routines will be removed" = "Tous les routines personnalisées seront supprimés";
 "This cannot be undone!" = "Ça ne peut pas être annulé!";
 "Reset" = "Réinitialiser";
 "Resources" = "Ressources";
