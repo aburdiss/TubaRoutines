@@ -49,7 +49,7 @@ struct ExerciseDetailView: View {
             }
             .padding()
         )
-    .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
