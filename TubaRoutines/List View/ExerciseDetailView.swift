@@ -31,6 +31,7 @@ struct ExerciseDetailView: View {
                 .resizable()
                 .scaledToFit()
         }
+        .navigationBarTitle(Text("\(self.image)"))
         .navigationBarItems(trailing:
             Button(action: {
                 if self.favorites.contains(self.image) {

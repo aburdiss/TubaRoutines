@@ -287,3 +287,10 @@ class CustomRoutines: ObservableObject {
         return self.routines
     }
 }
+
+/**
+ Overrides default yellow color with custom color.
+ */
+extension Color {
+    static let yellow = Color("AccentColor")
+}

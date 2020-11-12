@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  TubaRoutines
+
+  Created by Alexander Burdiss on 9/28/20.
+  Copyright © 2020 Alex Burdiss. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "튜바의 루틴";
+"CFBundleName" = "튜바의 루틴";
