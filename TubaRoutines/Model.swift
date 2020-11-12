@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 /**
 Array of all long tone exercises in the app
